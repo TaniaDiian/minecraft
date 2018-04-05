@@ -13,25 +13,7 @@ body{
   min-height: 100%;
   }
 
-@media(min-width: 320px){
-  .social{
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    align-content: center;
-    }
-}
-@media(min-width: 560px){
 
-}
-@media(min-width: 960px){
-
-}
-@media(min-width: 1920px){
-
-}
 
 .wrapper{
 	max-width: 960px;
@@ -41,7 +23,9 @@ body{
 
 .header_top{
   background: #37a14c;
-  width: 100%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+ 
 }
 .v_flex_row{
   display: flex;
@@ -57,12 +41,7 @@ body{
   font-weight: normal;  
   align-content: center;
 }
-.background_icons{
-  width: 28px;
-  height: 28px;
-  margin: 8px 4px;
-  position: relative;
-}
+
 /* щоб посилання було на всьому блоці*/
 .background_icons a{
   display: block;
@@ -77,16 +56,73 @@ body{
   align-items: center;
   align-content: center;
 }
-.background_vk{
-  background: #54769c;
+
+.contacts_items{
+  color: #317530;
+  font-size: 16px;
+  font-weight: normal; 
 }
-.background_fb{
-  background: #004899;
+.contacts_items a{
+  color: inherit;
+  text-decoration: none;
+  font-size: 20px;
 }
-.background_vk img, .background_fb img{
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+.contacts_items_skype{
+  color: black;
+  font-size: 16px;
+}
+.contacts_items_skype a{
+  color: #1200ff;
+  text-decoration: none;
+}
+.yellow_button{
+  background: #fdce09;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  border-radius: 6px;
+  box-shadow: 0px 3px 3px 0px #293224;
+  text-align:center;
+  vertical-align: middle;
+  align-content: center;
+  padding: 10px;
+}
+.yellow_button a{
+  display: block;
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+  color: white;
 }
 
+.button_select{
+  color: white;
+}
+.header_bottom{
+  background: #37a14c;
+  width: 100%;
+}
+.top_menu a{
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+}
+.top_menu li{
+  padding: 10px;
+  border-bottom: 1px solid #57e974;
+}
+
+
+
+
+@media(min-width: 320px){
+
+}
+@media(min-width: 560px){
+
+}
+@media(min-width: 960px){
+
+}
+@media(min-width: 1920px){
+
+}
