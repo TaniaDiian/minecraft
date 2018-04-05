@@ -1,0 +1,92 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+img{
+  max-width: 100%;
+}
+html{
+  height: 100%;
+}
+body{
+  min-height: 100%;
+  }
+
+@media(min-width: 320px){
+  .social{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    }
+}
+@media(min-width: 560px){
+
+}
+@media(min-width: 960px){
+
+}
+@media(min-width: 1920px){
+
+}
+
+.wrapper{
+	max-width: 960px;
+	margin: 0 auto;
+	padding: 0 10px;
+}
+
+.header_top{
+  background: #37a14c;
+  width: 100%;
+}
+.v_flex_row{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center
+}
+.action{
+  color: white;
+  font-size: 16px;
+  font-weight: normal;  
+  align-content: center;
+}
+.background_icons{
+  width: 28px;
+  height: 28px;
+  margin: 8px 4px;
+  position: relative;
+}
+/* щоб посилання було на всьому блоці*/
+.background_icons a{
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.social{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  align-items: center;
+  align-content: center;
+}
+.background_vk{
+  background: #54769c;
+}
+.background_fb{
+  background: #004899;
+}
+.background_vk img, .background_fb img{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
