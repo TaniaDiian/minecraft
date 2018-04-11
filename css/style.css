@@ -24,8 +24,7 @@ body{
 .header_top{
   background: #37a14c;
   padding-top: 10px;
-  padding-bottom: 10px;
- 
+  padding-bottom: 10px; 
 }
 .v_flex_row{
   display: flex;
@@ -43,10 +42,14 @@ body{
 }
 
 /* щоб посилання було на всьому блоці*/
-.background_icons a{
-  display: block;
+/*.background_icons a{
+  display: inline-block;
   width: 100%;
   height: 100%;
+}*/
+.background{
+  padding-left: 10px;
+
 }
 .social{
   display: flex;
@@ -115,7 +118,9 @@ body{
 
 
 @media(min-width: 320px){
-
+  .social{
+    padding-left: 20px;
+  }
 }
 @media(min-width: 560px){
 
