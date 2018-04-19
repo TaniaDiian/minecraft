@@ -13,8 +13,6 @@ body{
   min-height: 100%;
   }
 
-
-
 .wrapper{
 	max-width: 960px;
 	margin: 0 auto;
@@ -59,17 +57,40 @@ body{
   align-items: center;
   align-content: center;
 }
+.logo, .image{
+  text-align:center;
+  vertical-align: middle;
+  align-content: center;
+}
 
-.contacts_items{
+.contacts_items, .contacts_items_skype{
   color: #317530;
   font-size: 16px;
   font-weight: normal; 
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: stretch;
+  align-content: stretch;
 }
 .contacts_items a{
   color: inherit;
   text-decoration: none;
   font-size: 20px;
 }
+.contacts_content{
+  width: 200px;
+}
+.contacts_indent, .contacts_indent_skype{
+  width: 85px;
+  flex-basis: 90px;
+}
+.contacts_indent_skype{
+  display: inline-block;
+}
+
+
 .contacts_items_skype{
   color: black;
   font-size: 16px;
@@ -112,7 +133,34 @@ body{
 .top_menu li{
   padding: 10px;
   border-bottom: 1px solid #57e974;
+  border-top: 1px solid #247634;
+  border-right: 1px solid #247634;
+  border-left: 1px solid #247634;
+  list-style: none;
+  text-align:center;
+  vertical-align: middle;
+  align-content: center;
 }
+.sidebar a{
+  text-decoration: none;
+  color: black;
+  font-size: 20px;
+}
+.sidebar li{
+  list-style: none;
+}
+.sidebar{
+  padding-top: 25px;
+}
+
+ul.sidebar > li{
+  border-bottom: 1px solid #e7e7e7;
+  margin-bottom: 20px; 
+  margin-top: 18px;
+}
+
+
+
 
 
 
