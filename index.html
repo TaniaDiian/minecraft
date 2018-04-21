@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>base project</title>
+  <title> project by Tanja</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width"> 
   <link rel="stylesheet" type="text/css" href="css/style.css">
@@ -41,57 +41,36 @@
               <img src="icons/logo.png" alt="some text">
             </a>
   			</div>
-  			<div class="contacts">
-          <div class="contacts_items">
-    				<div class="contacts_indent">
-              Админ:
-            </div>
-            <div class="contacts_content">
-      				<a href="tel:+380681614155">
-    					 +38(068)1614155
-    				  </a>
-    				  <a href="tel:+380681333155">
-    					 +38(068)1333155
-      				</a>
+  			<!-- <div class="contacts"> -->
+          <div class="contact">      
+    				<div class="contact_name">Админ:</div>
+            <div class="contact_connect">
+      				<a href="tel:+380681614155">+38(068)1614155 </a>
+    				  <a href="tel:+380681333155">+38(068)1333155</a>
             </div>
           </div>
-          <div class="contacts_items">  
-            <div class="contacts_indent">
-    				  По донату:
-            </div>  
-            <div class="contacts_content">
-      				<a href="tel:+380681333155">
-      					0681333155
-      				</a>
+          <div class="contact">  
+            <div class="contact_name">По донату:</div>  
+            <div class="contact_connect">
+      				<a href="tel:+380681333155">0681333155</a>
             </div> 
           </div>
-          <div class="contacts_items_skype">
-            <div class="contacts_indent_skype">
-              Скайп: 
-                <a href="#">                 
-                  <i class="sprite sprite-skype"> </i>
-                </a>	
-              </div>
-                    
-                <div class="contacts_content_skype">
-                  <a href="#">                 
-                    minecraft-km7
-                  </a>  
-                </div>
-             
+          <div class="skype">
+            <div class="contact_name"> Скайп:</div>                
+              <div class="contact_connect">
+                <a href="skype:minecraft-km7"> 
+                  <span class="skype_icon"></span> minecraft-km7      
+                </a>  
+              </div>             
   				</div>
-  			</div>
+  			<!-- </div> -->
   			<div class="button_select">
-  				<div class="yellow_button">
-            <a href="#">
-    					Выбрать сервер
-    				</a>
-          </div>
-          <div class="yellow_button">
-    				<a href="">
-    					Случайный
-    				</a>  
-          </div>				
+  				<!-- <div class="yellow_button"> -->
+            <a href="#">Выбрать сервер</a>
+          <!-- </div> -->
+          <!-- <div class="yellow_button"> -->
+    				<a href="#">Случайный</a>  
+         <!--  </div>	 -->			
   			</div>
   			<div class="image">
   				  <a href="#">
@@ -111,17 +90,23 @@
   			</div>
   		</div>
   	</div>
-    <div class="main wrapper">
-    	
+    <div class="main  wrapper">
+    	<div class="menu_opener">
+        <i id="menuBtn" class="icon_list ">
+            <span></span>
+            <span></span>
+            <span></span>
+        </i>
+      </div>
     		<ul class="sidebar">
     				<li>
     					<a href="#">Мир Minecraft</a>
     					<ul>
-    						<li><a href="#">Блоки</a></li>
-    						<li><a href="#">Мобы</a></li>
-    						<li><a href="#">Структуры</a></li>
-    						<li><a href="#">Биомы</a></li>
-    						<li><a href="#">Миры</a></li>
+    						<li><a href="#">- Блоки</a></li>
+    						<li><a href="#">- Мобы</a></li>
+    						<li><a href="#">- Структуры</a></li>
+    						<li><a href="#">- Биомы</a></li>
+    						<li><a href="#">- Миры</a></li>
     					</ul>
     				</li>
     				<li><a href="#">Industrial craft</a></li>
@@ -137,14 +122,14 @@
     				Подключайся и играй на наших серверах!
     			</div>
     			<div class="article_img">
-    				<img src="" alt="">
+    				<img src="icons/article_img.png" alt="">
     			</div>
     			<div class="article_promo-text">
-    				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt iste nostrum blanditiis cupiditate laborum fuga quisquam quas praesentium veritatis architecto.
+    				Minecraft — компьютерная игра в стиле песочницы с открытым миром, в которой перед игроком не ставятся какие-либо определенные цели — игроки сами выбирают, что им делать в игре. Несмотря на это, игра содержитсистему достижений — поощрительных наград за выполнение определенных действий.
     			</div>
     		</div>
     		<div class="card_article">
-    			<a href="">
+    			<a href="#">
     				<div class="card_article_info">
     					<div class="card_article_date">
     						12/12/1994
@@ -154,7 +139,7 @@
     					</div>   					
     				</div>
     				<div class="cards_image">
-    					<img src="" alt="">
+    					<img src="#" alt="">
     				</div>
     			</a>
     		</div>
@@ -192,6 +177,12 @@
     	</div>
     </div>
   </div>
-<script src="js/src.js" type="text/javascript"></script>
+  <script  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+  <script src="js/hammer.js" type="text/javascript">  </script>
+ <!--  <script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.js"></script> -->
+  <script src="js/src.js" type="text/javascript"> </script>
+
 </body>
 </html>

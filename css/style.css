@@ -11,6 +11,7 @@ html{
 }
 body{
   min-height: 100%;
+  font-family: Arial;
   }
 
 .wrapper{
@@ -39,15 +40,12 @@ body{
   align-content: center;
 }
 
-/* щоб посилання було на всьому блоці*/
-/*.background_icons a{
-  display: inline-block;
+/* щоб посилання було на всьому блоці*/ /*.background_icons a{display: inline-block;
   width: 100%;
   height: 100%;
 }*/
 .background{
   padding-left: 10px;
-
 }
 .social{
   display: flex;
@@ -62,8 +60,12 @@ body{
   vertical-align: middle;
   align-content: center;
 }
+.logo, .image, .contact, .button_select, .skype{
+  margin-top: 15px;
+}
 
-.contacts_items, .contacts_items_skype{
+
+.contact, .skype{
   color: #317530;
   font-size: 16px;
   font-weight: normal; 
@@ -74,32 +76,109 @@ body{
   align-items: stretch;
   align-content: stretch;
 }
-.contacts_items a{
+.contact a{
   color: inherit;
   text-decoration: none;
   font-size: 20px;
 }
-.contacts_content{
+.contact_connect{
   width: 200px;
-}
-.contacts_indent, .contacts_indent_skype{
-  width: 85px;
-  flex-basis: 90px;
-}
-.contacts_indent_skype{
   display: inline-block;
 }
+.contact_name{
+  width: 90px;
+  flex-basis: 100px;
 
-
-.contacts_items_skype{
+}
+.skype > .contact_name{
   color: black;
   font-size: 16px;
 }
-.contacts_items_skype a{
+.skype >.contact_connect a{
   color: #1200ff;
   text-decoration: none;
 }
-.yellow_button{
+.skype >.contact_connect{
+  float: left;
+}
+.skype_icon{
+  width: 17px;
+  height: 17px;
+  background-image: url(../icons/skype.png);
+  display: inline-block;
+  background-repeat:no-repeat;  
+  transform: translateY(3px);
+}
+
+.menu_opener{
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  z-index: 10;
+}
+.icon_list{ 
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  align-items: center;
+  align-content: stretch;
+  cursor: pointer;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 10px;
+  
+    position: relative;
+    border-radius: 50%;
+    background: #37a14c;
+    width: 40px;
+    height: 40px; 
+    transition: all 1s ease;  
+}
+.icon_list span{
+  position: relative;
+  border-radius: 25%;
+    background: white;
+    /*margin:2px 0; */
+    width: 13px;
+    height: 4px;  
+     transition: all 1s ease; 
+}
+.icon_list span:before{
+  content: '';
+  position: absolute;
+  border-radius: 50%;
+    background: #fff;
+    width: 4px;
+    height: 4px; 
+    left: -8px; 
+}
+
+.icon_list-open {
+  
+  padding:0; 
+  transform: rotate(45deg);
+   transition: all 1s ease; 
+}
+.icon_list-open span:nth-child(2){
+  opacity: 0;
+}
+.icon_list-open span{
+  position: absolute;
+  width: 24px;
+   transition: all 1s ease; 
+}
+.icon_list-open span:before{
+  opacity: 0;
+}
+.icon_list-open span:nth-child(1){
+  transform: rotate(90deg);
+}
+
+
+/*.yellow_button{
   background: #fdce09;
   margin-top: 15px;
   margin-bottom: 15px;
@@ -109,22 +188,32 @@ body{
   vertical-align: middle;
   align-content: center;
   padding: 10px;
-}
-.yellow_button a{
+}*/
+
+.button_select a{
   display: block;
-  width: 100%;
-  height: 100%;
   text-decoration: none;
   color: white;
+  background: #fdce09;
+  margin-top: 15px;
+
+  border-radius: 6px;
+  box-shadow: 0px 3px 3px 0px #293224;
+  text-align:center;
+  vertical-align: middle;
+  align-content: center;
+  padding: 10px;
 }
 
 .button_select{
   color: white;
 }
+
 .header_bottom{
   background: #37a14c;
-  width: 100%;
+  margin-top: 10px;
 }
+
 .top_menu a{
   text-decoration: none;
   color: white;
@@ -141,6 +230,9 @@ body{
   vertical-align: middle;
   align-content: center;
 }
+
+
+
 .sidebar a{
   text-decoration: none;
   color: black;
@@ -151,18 +243,54 @@ body{
 }
 .sidebar{
   padding-top: 25px;
+  padding-left: 6px;
+  position: relative;
+  position: fixed;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  background: white;
+  overflow-y: scroll;
+  transition: .5s all ease;
+}
+.sidebar_active{
+  left:0; 
+  transition: .5s all ease;
+  right: 0;
+  bottom: 0;
+  z-index: 7;
 }
 
 ul.sidebar > li{
   border-bottom: 1px solid #e7e7e7;
-  margin-bottom: 20px; 
-  margin-top: 18px;
+  padding-bottom: 20px; 
+  padding-top: 18px;
+}
+ul.sidebar ul a{
+  color: #ff0000;
+}
+ul.sidebar ul li{
+  padding-left: 23px;
+  padding-top: 12px;
+}
+ul.sidebar ul li:first-child{
+  padding-top:20px ;
 }
 
+.article_title{
+  font-size: 24px;
+  font-weight: bold;
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
+.article_im{
 
-
-
-
+}
+.article_promo-text{
+  padding-top: 25px;
+  padding-bottom: 35px;
+  border-bottom: 1px solid #e7e7e7;
+}
 
 
 @media(min-width: 320px){
