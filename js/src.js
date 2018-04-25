@@ -16,11 +16,11 @@ var hammertime = new Hammer(document);
 hammertime.on('panleft panright', function(ev) {
 	console.log(ev.type);
 	if(ev.type == 'panright'){
-		$('.sidebar_active .icon_list').addClass('icon_list-open');
+		$('.menu_opener .icon_list').addClass('icon_list-open');
 		$('.sidebar').toggleClass('sidebar_active')
 	}
 	if(ev.type == 'panleft'){
-		$('.sidebar_active .icon_list').removeClass('icon_list-open');
+		$('.menu_opener .icon_list').removeClass('icon_list-open');
 		$('.sidebar').toggleClass('sidebar_active')
 	}
 });

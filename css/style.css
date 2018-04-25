@@ -40,13 +40,15 @@ body{
   align-content: center;
 }
 
-/* щоб посилання було на всьому блоці*/ /*.background_icons a{display: inline-block;
+/* щоб посилання було на всьому блоці*/ 
+/*.background_icons a{
+display: inline-block;
   width: 100%;
   height: 100%;
 }*/
-.background{
+/*.background{
   padding-left: 10px;
-}
+}*/
 .social{
   display: flex;
   flex-direction: row;
@@ -55,12 +57,16 @@ body{
   align-items: center;
   align-content: center;
 }
-.logo, .image{
+.social a{
+  display: inline-block;
+  margin-right: 10px;
+}
+.logo{
   text-align:center;
   vertical-align: middle;
   align-content: center;
 }
-.logo, .image, .contact, .button_select, .skype{
+.logo,.contact, .button_select, .skype{
   margin-top: 15px;
 }
 
@@ -109,11 +115,16 @@ body{
   background-repeat:no-repeat;  
   transform: translateY(3px);
 }
+.skype .contact_connect :last-child{
+  font-style: italic;
+}
+
+
 
 .menu_opener{
   position: fixed;
-  top: 20px;
-  left: 20px;
+  top: 85px;
+  left: 10px;
   border: 2px solid #fff;
   border-radius: 50%;
   z-index: 10;
@@ -218,9 +229,13 @@ body{
   text-decoration: none;
   color: white;
   font-size: 16px;
+  
+  display: block;
+  
 }
 .top_menu li{
   padding: 10px;
+
   border-bottom: 1px solid #57e974;
   border-top: 1px solid #247634;
   border-right: 1px solid #247634;
@@ -229,6 +244,9 @@ body{
   text-align:center;
   vertical-align: middle;
   align-content: center;
+
+  width: 100%;
+  height: 100%;
 }
 
 
@@ -291,6 +309,87 @@ ul.sidebar ul li:first-child{
   padding-bottom: 35px;
   border-bottom: 1px solid #e7e7e7;
 }
+
+.card_article_info{
+  height: 92px;
+ 
+  background: rgb(135,224,253); /* Old browsers */
+  background: -moz-linear-gradient(top, rgb(135,224,253) 0%, rgb(48,148,68) 0%, rgb(69,188,92) 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, rgb(135,224,253) 0%,rgb(48,148,68) 0%,rgb(69,188,92) 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, rgb(135,224,253) 0%,rgb(48,148,68) 0%,rgb(69,188,92) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#87e0fd', endColorstr='#45bc5c',GradientType=0 ); /* IE6-9 */
+  
+  font-size: 14px;
+  padding-top: 15px;
+  padding-right: 32px;
+  padding-bottom: 15px;
+  padding-left: 8px; 
+  border-bottom: 1px solid #57e974;
+
+}
+.card_article_date{
+  color: #000000;
+}
+.card_article_title{
+  color: #fff;
+}
+.card_article a{
+  text-decoration: none;
+}
+.cards_image{
+  border-top: 1px solid #247634;
+  
+} 
+.card_article{
+  margin: 0 auto; 
+  width: 232px;
+  margin-bottom: 30px;
+}
+
+.footer_top{
+  background: rgb(135,224,253); /* Old browsers */
+  background: -webkit-linear-gradient(rgb(135,224,253) 0%, rgb(254,197,13) 0%, rgb(240,176,6) 100%);
+  background: -o-linear-gradient(rgb(135,224,253) 0%, rgb(254,197,13) 0%, rgb(240,176,6) 100%);
+  background: linear-gradient(rgb(135,224,253) 0%, rgb(254,197,13) 0%, rgb(240,176,6) 100%); /* FF3.6-15 */ /* Chrome10-25,Safari5.1-6 */ /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#87e0fd', endColorstr='#f0b006',GradientType=0 ); /* IE6-9 */
+  
+  padding-top: 15px;
+  padding-bottom: 15px;
+ }
+.footer_top .action{
+  font-size: 20px;
+  text-align: center;
+
+}
+.footer_top  .contact{
+  color: black;
+}
+.footer_top .contact > .contact_name{
+  text-align: right;
+  padding-right: 15px;
+}
+.footer_middle{ /* FF3.6-15 */
+  background: -webkit-linear-gradient(rgb(135,224,253) 0%, rgb(69,187,92) 0%, rgb(61,155,80) 100%);
+  background: -o-linear-gradient(rgb(135,224,253) 0%, rgb(69,187,92) 0%, rgb(61,155,80) 100%);
+  background: linear-gradient(rgb(135,224,253) 0%, rgb(69,187,92) 0%, rgb(61,155,80) 100%); /* Chrome10-25,Safari5.1-6 */
+}
+.footer_middle a{
+  display: inline-block;
+  margin-bottom: 15px;
+  
+}
+.footer_middle .wrapper{
+  text-align: center;
+  padding-top: 15px;
+}
+.copyright{
+  padding: 25px 0;
+  font-size: 14px;
+  padding-left: 5px;
+}
+
+ 
+
 
 
 @media(min-width: 320px){
