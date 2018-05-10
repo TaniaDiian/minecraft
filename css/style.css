@@ -12,19 +12,19 @@ html{
 body{
   min-height: 100%;
   font-family: Arial;
+  line-height: 1;
   }
 
 .wrapper{
-	max-width: 960px;
+	max-width: 1010px;
 	margin: 0 auto;
 	padding: 0 10px;
 }
 
 .header_top{
   background: #37a14c;
-  padding-top: 10px;
-  padding-bottom: 10px; 
 }
+
 .v_flex_row{
   display: flex;
   flex-direction: row;
@@ -38,6 +38,23 @@ body{
   font-size: 16px;
   font-weight: normal;  
   align-content: center;
+  padding: 5px 0; 
+}
+
+.social{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  align-items: center;
+  align-content: center;
+
+  font-size: 0;
+}
+.social a{
+  display: inline-block;
+  margin-left: 10px;
+  padding: 10px 0;
 }
 
 /* щоб посилання було на всьому блоці*/ 
@@ -49,28 +66,28 @@ display: inline-block;
 /*.background{
   padding-left: 10px;
 }*/
-.social{
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: space-around;
-  align-items: center;
-  align-content: center;
+.header_middle{
+  padding: 10px 10px;
 }
-.social a{
+.logo a{
   display: inline-block;
-  margin-right: 10px;
+  width: 100%;
+  height: 100%;
 }
 .logo{
   text-align:center;
-  vertical-align: middle;
   align-content: center;
-}
-.logo, .contacts, .btn{
-  margin-top: 12px;
+  line-height: 5em;
 }
 
-
+.logo img, .contacts, .button_select{
+  /*margin-top: 12px;*/
+  padding: 0 10px;
+  vertical-align: middle;
+}
+.button_select{
+  padding-top: 25px;
+}
 .contact, .skype{
   color: #317530;
   font-size: 16px;
@@ -81,7 +98,12 @@ display: inline-block;
   justify-content: flex-start;
   align-items: stretch;
   align-content: stretch;
+
+  padding: 5px 0;
 }
+/*.contact_connect a::first-child{
+  padding: 5px 0;
+}*/
 .contact a{
   color: inherit;
   text-decoration: none;
@@ -91,20 +113,23 @@ display: inline-block;
   width: 200px;
   display: inline-block;
 }
+.contact_connect ::last-child{
+  display: inline-block;
+}
 .contact_name{
   width: 90px;
   flex-basis: 100px;
 
 }
-.skype > .contact_name{
+.skype{ 
   color: black;
   font-size: 16px;
 }
-.skype >.contact_connect a{
+.skype a{
   color: #1200ff;
   text-decoration: none;
 }
-.skype >.contact_connect{
+.skype {
   float: left;
 }
 .skype_icon{
@@ -119,14 +144,18 @@ display: inline-block;
   font-style: italic;
 }
 
+
+
+/*main__________________________________*/
 .main{
   background: white;
+  padding-top: 25px;
 }
 
 .menu_opener{
   position: fixed;
-  top: 85px;
-  left: 10px;
+  top: 65px;
+  right: 10px;
   border: 2px solid #fff;
   border-radius: 50%;
   z-index: 10;
@@ -191,18 +220,10 @@ display: inline-block;
 }
 
 
-/*.yellow_button{
-  background: #fdce09;
-  margin-top: 15px;
-  margin-bottom: 15px;
-  border-radius: 6px;
-  box-shadow: 0px 3px 3px 0px #293224;
-  text-align:center;
-  vertical-align: middle;
-  align-content: center;
-  padding: 10px;
-}*/
-
+.yellow_button{
+  
+  padding: 10px 0;
+}
 .btn{
   display: block;
   text-decoration: none;
@@ -215,12 +236,14 @@ display: inline-block;
   text-align:center;
   vertical-align: middle;
   align-content: center;
-  padding: 10px;
+  padding: 10px 0;
 }
+
 
 .header_bottom{
   background: #37a14c;
-  margin-top: 10px;
+  /*margin-top: 10px;*/
+  /*margin-bottom: 25px;*/
 }
 
 .top_menu a{
@@ -257,7 +280,7 @@ display: inline-block;
   list-style: none;
 }
 .sidebar{
-  padding-top: 25px;
+ /* padding-top: 25px;*/
   padding-left: 6px;
   position: relative;
   position: fixed;
@@ -268,6 +291,7 @@ display: inline-block;
   overflow-y: scroll;
   transition: .5s all ease;
   height: 100%;
+  padding-right: 20px;
 }
 .sidebar_active{
   left:0; 
@@ -276,42 +300,57 @@ display: inline-block;
   bottom: 0;
   z-index: 7;
 }
-
+.row{
+  margin:0 -10px; 
+}
 ul.sidebar > li{
+  padding-bottom: 15px;
+  padding-top: 15px;
   border-bottom: 1px solid #e7e7e7;
-/*  margin-bottom: 20px; 
-  margin-top: 18px;*/
 }
-ul.sidebar > li :first-child{
-  margin-top: 0px;
+
+ul.sidebar > :first-child  {
+  padding-top: 0px;
+  padding-bottom: 0px;
+} 
+
+ul.sidebar ul >:first-child  {
+  padding-top: 20px;
+} 
+ul.sidebar ul >:last-child  {
+  padding-bottom: 10px;
 }
+
+ul.sidebar li a{
+display: inline-block;
+  width: 100%;
+  height: 100%;
+}
+
 ul.sidebar ul a{
   color: #ff0000;
+  font-size: 16px;
 }
 ul.sidebar ul li{
   padding-left: 23px;
-  padding-top: 12px;
-}
-ul.sidebar ul li:first-child{
-  padding-top:20px ;
-}
-.card_article{
-  /*padding-left: 20px;*/
+    padding-bottom: 5px;
+    padding-top: 5px;
 }
 
 
 .article_title{
   font-size: 24px;
   font-weight: bold;
-  padding-top: 25px;
-  padding-bottom: 25px;
+  padding-bottom: 20px;
 }
 .article_im{
 }
 .article_promo-text{
-  padding-top: 25px;
-  padding-bottom: 35px;
+  padding-top: 20px;
+  padding-bottom: 40px;
   border-bottom: 1px solid #e7e7e7;
+  font-size: 14px;
+  line-height: 14px;
 }
 
 .card_article_info{
@@ -325,14 +364,16 @@ ul.sidebar ul li:first-child{
   
   font-size: 14px;
   padding-top: 15px;
-  padding-right: 32px;
-  padding-bottom: 15px;
-  padding-left: 8px; 
+  padding-right: 20px;
+  padding-bottom: 10px;
+  padding-left: 5px; 
   border-bottom: 1px solid #57e974;
 
 }
 .card_article_date{
   color: #000000;
+  padding-bottom: 8px;
+
 }
 .card_article_title{
   color: #fff;
@@ -349,7 +390,11 @@ ul.sidebar ul li:first-child{
   margin: 0 auto; 
   margin-bottom: 30px;
   margin-top: 60px;
+  padding-right: 11px;
+  padding-left: 11px;
 }
+
+
 
 .footer_top{
   background: rgb(135,224,253); /* Old browsers */
@@ -358,18 +403,39 @@ ul.sidebar ul li:first-child{
   background: linear-gradient(rgb(135,224,253) 0%, rgb(254,197,13) 0%, rgb(240,176,6) 100%); /* FF3.6-15 */ /* Chrome10-25,Safari5.1-6 */ /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#87e0fd', endColorstr='#f0b006',GradientType=0 ); /* IE6-9 */
   
-  padding-top: 15px;
+  padding-top: 20px;
   padding-bottom: 15px;
+
  }
+
+ .footer_top .contact_connect{
+  width: 160px;
+ }
+
+
 .footer_top .action{
   font-size: 20px;
   text-align: center;
-
+  margin-left: 0;
+  margin-right: 0;
+  padding-left: 5px; 
 }
 .footer_top  .contact{
   color: black;
+  padding-right: 40px;
+  text-align: center;
+  justify-content: center;
+  margin-left: 0;
+  margin-right: 0;
 }
-.footer_top .contact > .contact_name{
+
+/*.footer_top  .contacts{
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  text-align: center;
+}*/
+.footer_top .contact .contact_name{
   text-align: right;
   padding-right: 15px;
 }
@@ -377,34 +443,32 @@ ul.sidebar ul li:first-child{
   background: -webkit-linear-gradient(rgb(135,224,253) 0%, rgb(69,187,92) 0%, rgb(61,155,80) 100%);
   background: -o-linear-gradient(rgb(135,224,253) 0%, rgb(69,187,92) 0%, rgb(61,155,80) 100%);
   background: linear-gradient(rgb(135,224,253) 0%, rgb(69,187,92) 0%, rgb(61,155,80) 100%); /* Chrome10-25,Safari5.1-6 */
+  padding: 10px 5px;
 }
 
 .footer_middle ul{
-  text-align: justify;
+  text-align: center;
   width: 100%;
+  margin-bottom: -20px;
 }
 .footer_middle li {
   display: inline-block;
-  margin-bottom: 15px;
 }
 .footer_middle li:last-child{
   display: inline-block;
   content: '';
   width: 100%;
   height: 1px;
-}
-.footer_middle > .wrapper{
-  padding-top: 15px;
-  font-size: 0px;
+  
 }
 
-.copyright{
-  padding: 25px 0;
+.footer_bottom{
+  padding: 25px 5px;
   font-size: 14px;
   padding-left: 5px;
 }
 
-.clearfix:after, .row:after{
+.clearfix:after, .row:after, .clearfix:before, .row:before{
   content: '';
   clear: both;
   width: 100%;
@@ -417,6 +481,8 @@ ul.sidebar ul li:first-child{
   .social{
     padding-left: 20px;
   }
+
+
 }
 @media(min-width: 560px){
 
@@ -432,6 +498,12 @@ ul.sidebar ul li:first-child{
 ul.sidebar{
   position:static;
   overflow-y:visible; 
+}
+.footer_top .action{
+  text-align: left;
+}
+.footer_middle ul{
+  text-align: justify;
 }
 .col-tablet-3-4{
   float: left;
@@ -460,6 +532,25 @@ ul.sidebar{
 .col-tablet-36-pers{
   float: left;
   width: 36%;
+}
+.col-tablet-1-2{
+  float: left;
+  width: 50%;
+}
+.logo {
+    line-height: 7em;
+}
+
+.footer_top  .contact{
+  text-align: right;
+  justify-content:  flex-end;
+  padding-right: 35px;
+}
+.button_select{
+  padding-top: 0px;
+}
+ul.sidebar > li{
+  margin-top: 0px;
 }
 
 }

@@ -25,4 +25,9 @@ hammertime.on('panleft panright', function(ev) {
 	}
 });
 
+$(document).click(function(event) {
+ console.log(event.target);
+});
+
+
 
